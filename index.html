@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"> 
+        <title>Brassens: cours d'informatique - le web</title>
+        <link rel="icon" href="http://www.ville-bondy.fr/fileadmin/templates/img/favicon.ico" type="image/gif" sizes="16x16"> 
+
+        <link rel="stylesheet" href="rsc/css/meyer-reset.css">
+        <link rel="stylesheet" href="rsc/css/font-awesome.css">
+        <link rel="stylesheet" href="rsc/css/prism.css">
+
+        <script src="rsc/js/jquery-3.2.1.js"></script>
+
+        <link rel="stylesheet" href="rsc/css/style.css">
+        <script src="rsc/js/script.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav></nav>
+        </header>
+        <aside></aside>
+
+        <section>
+            <article>
+                <time datetime="" pubdate></time>
+                <ul id="breadcrumb">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Module</a></li>
+                    <li>Article</li>
+                </ul>
+                
+                <p>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam molestie aliquet diam quis bibendum. Vestibulum elit erat, feugiat at odio nec, dignissim dapibus nisl. Phasellus ultricies rhoncus feugiat. Fusce quam nunc, consectetur pulvinar auctor facilisis, scelerisque eget massa. Maecenas cursus felis ut mauris efficitur ullamcorper. Morbi molestie nisi a libero maximus elementum. Nulla eleifend risus bibendum, mollis nulla iaculis, venenatis est.</p>
+<p>
+Vestibulum at ipsum et mauris pharetra luctus. Quisque malesuada dictum iaculis. Sed non lobortis nisl. Nam facilisis pulvinar magna. Duis bibendum magna non eros gravida fermentum. Maecenas interdum neque varius sapien pretium vehicula. Phasellus dignissim et lacus ut rhoncus. Donec auctor blandit dictum. Suspendisse vel nisi et augue vulputate pharetra in ac tortor. Morbi vitae nisi consectetur, pellentesque urna id, porttitor magna. Ut vitae lobortis libero, at pretium libero. Aliquam malesuada lacinia libero vel fermentum. Pellentesque tellus lectus, interdum in tellus et, ornare mollis justo. </p>
+
+                <h1>Page d'entrée du site avec explication du pré-requis au fonctionnement</h1>
+                <p>Expliquer:</p>
+                <ol>
+                    <li>Nécessite un serveur: le plugin serveur de chrome.</li>
+                    <li>Screen du résultat attendu gràce au serveur.</li>
+                    <li>Explication succinte des différents navigations pertinentes.</li>
+                </ol>
+
+                <pre><code class="language-html line-numbers"><script type="prism-html-markup"><!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1 class="foo">h1. Heading 1</h1>
+        <p>Hello World!</p>
+    </body>
+</html></script></code></pre>
+
+                <pre ><code class="language-css line-numbers">/***** MENU *****/
+#menu-left li a,
+#menu-left li h2 {
+    display: block;
+    color: #000;
+    padding: 6px 16px 4px 16px;
+}
+
+#menu-left li a:hover {
+    background-color: #CCC;
+}
+/***** !MENU ****/</code></pre>
+
+                <pre ><code class="language-javascript line-numbers">if (pathOnly == "/") {
+    fileName = "index.html";
+    pathOnly = "/";
+    pathFile = pathOnly + fileName;
+    pathModule = "/modules/home/";
+    var pathIndex = null;
+}
+
+$('nav').load('/navigation.html', function() {
+    if (pathOnly.includes("home")) {
+        pathOnly = "/";
+    }
+    $("a[href='" + pathOnly + "index.html" + "']").addClass("active");
+});</code></pre>
+
+                <pre class="language-bash command-line" data-user="root" data-host="localhost"><code>cd /usr/local/etc
+cp php.ini php.ini.bak
+vi php.ini</code></pre>
+
+                <pre class="language-bash command-line" data-user="chris" data-host="remothost" data-output="2, 4-8"><code>pwd
+/usr/home/chris/bin
+ls -la
+total 2
+drwxr-xr-x   2 chris  chris     11 Jan 10 16:48 .
+drwxr--r-x  45 chris  chris     92 Feb 14 11:10 ..
+-rwxr-xr-x   1 chris  chris    444 Aug 25  2013 backup
+-rwxr-xr-x   1 chris  chris    642 Jan 17 14:42 deploy</code></pre>
+
+                <pre class="language-powershell command-line" data-prompt="PS C:\Users\Chris>" data-output="2-19"><code>dir
+
+    Directory: C:\Users\Chris
+
+Mode                LastWriteTime     Length Name
+----                -------------     ------ ----
+d-r--        10/14/2015   5:06 PM            Contacts
+d-r--        12/12/2015   1:47 PM            Desktop
+d-r--         11/4/2015   7:59 PM            Documents
+d-r--        10/14/2015   5:06 PM            Downloads
+d-r--        10/14/2015   5:06 PM            Favorites</code></pre>
+
+                <table>
+                    <tr>
+                        <th colspan="2">Titre</th>
+                    </tr>
+                    <tr>
+                        <td>DATA 1</td>
+                        <td>Description</td>
+                    </tr>
+                    <tr>
+                        <td>DATA 2</td>
+                        <td>Description</td>
+                    </tr>
+                    <tr>
+                        <td>DATA 3</td>
+                        <td>Description</td>
+                    </tr>
+                    <tr>
+                        <td>DATA 4</td>
+                        <td>Description</td>
+                    </tr>
+                    <tr>
+                        <td>DATA 5</td>
+                        <td>Description</td>
+                    </tr>
+                </table>
+
+            </article>
+
+            <footer></footer>
+        </section>
+
+        <script>
+            ajax();
+
+            $(function() {                
+                var documentUpdate = new Date(document.lastModified);
+                var iso8601 = /\d{4}-\d{2}-\d{2}/.exec(documentUpdate.toISOString())[0];
+
+                $("time[pubdate]").attr("datetime", iso8601);
+                $("time[pubdate]").html(documentUpdate.toLocaleDateString());
+            });
+        </script>
+        <script src="rsc/js/prism.js"></script>
+    </body>
+</html>

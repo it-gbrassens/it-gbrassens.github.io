@@ -1,0 +1,329 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 2.0em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1.3em;
+}
+
+h4 {
+    font-size: 1.1em;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #CCC;
+    margin: 20px 0;
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+
+ol {
+    list-style: decimal;
+    margin-left: 18px;
+}
+
+pre {
+    overflow: auto;
+    max-height: 400px;
+}
+
+.active {
+    background-color: #4CAF50;
+    color: #FFF;
+}
+
+.opacity {
+    opacity: 0.6;
+}
+
+article {
+    margin-top: 15px;
+/*    text-align: justify;*/
+}
+
+/***** NAVBAR *****/
+#navbar-top {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #5f5f5f;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
+    z-index: 5;
+}
+
+#navbar-top [class~="fa"] {
+    min-width: 19.813px;
+    text-align: center;
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.nav-horizontal li {
+    float: left;
+    text-transform: uppercase;
+}
+
+.nav-horizontal li a {
+    display: block;
+    padding: 11px 15px 9px 15px;
+    color: #F0F0F0;
+}
+
+.nav-horizontal li a:hover {
+    background-color: #111;
+    color: #FFF;
+    transition: 1s;
+}
+/***** !NAVBAR ****/
+
+/***** SEARCH-BOX *****/
+#search-box {
+    display: none;
+    position: relative;
+    right: -49.81px;
+    padding: 4px;
+    background-color: #5F5F5F;
+}
+
+#search-box table {
+    height: 100%;
+}
+
+#search-box td:first-child input {
+    height: 100%;
+}
+
+#search-box td:last-child {
+    background-color: #4CAF50;
+    width: 60px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#search-box td:last-child input {
+    padding: 6px 27px;
+}
+/***** !SEARCH-BOX ****/
+
+/***** DROPDOWN NAVBAR *****/
+li.dropdown {
+    float: left;
+}
+
+li.dropdown a, .dropbtn {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.dropbtn {
+    cursor: default;
+}
+
+.dropbtn::after {
+    content: " \25BC";
+    position: relative;
+    font-size: 0.7em;
+    bottom: 2px;
+}
+
+.dropdown a:hover, .dropdown:hover .dropbtn {
+    background-color: #111;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: fixed;
+    background-color: #AFAFAF;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #F1F1F1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: grid;
+}
+/***** !DROPDOWN NAVBAR ****/
+
+/***** MENU *****/
+#menu-left {
+    width: 200px;
+    height: calc(100% - 36px);
+    background-color: #f1f1f1;
+    position: fixed;
+    overflow-y: scroll;
+    top: 36px;
+}
+
+#menu-left li a,
+#menu-left li h2 {
+    display: block;
+    color: #000;
+    padding: 6px 16px 4px 16px; 
+    overflow: hidden;
+}
+
+#menu-left li h2 {
+    margin-top: 15px;
+}
+
+#menu-left li a {
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+
+#menu-left li a:hover {
+    background-color: #DDD;
+    overflow: visible;
+    white-space: inherit;
+}
+/***** !MENU ****/
+
+/***** ARTICLE *****/
+section {
+    margin-left: 200px;
+    min-height: calc(100vh - 36px - 40px - 15px);
+    padding: 38px 200px 0px 15px;
+}
+
+article > *:not(:first-child) {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+/***** !ARTICLE ****/
+
+/***** FOOTER *****/
+
+footer {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+footer a, footer p {
+    font-size: 0.9em;
+}
+
+footer #column{
+    display: flex;
+}
+
+footer #column div {
+    flex: 1;
+}
+
+footer #column h4 {
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: black;
+}
+
+footer a:hover {
+    color: #4CAF50;
+    text-decoration: underline;
+}
+
+footer #column a {
+    display: block;
+    margin: 3px;
+}
+/***** !FOOTER ****/
+
+/***** TABLE *****/
+.key {
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 3px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    font-weight: bold;
+}
+
+td, th {
+    border: 1px solid #DDD;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #F1F1F1;
+}
+
+tr:hover {
+    background-color: #DDD;
+}
+/***** !TABLE ****/
+
+/***** BREADCRUMB *****/
+#breadcrumb {
+    padding: 8px 16px;
+    list-style: none;
+    background-color: #eee;
+}
+
+#breadcrumb li {
+    display: inline;
+}
+
+#breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+
+#breadcrumb li a {
+    color: green;
+}
+/***** !BREADCRUMB ****/
+
+/***** UPDATE *****/
+time[pubdate] {
+    float: right;
+    margin: 8px 16px ;
+}
+/***** !UPDATE ****/
