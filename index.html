@@ -140,14 +140,7 @@ d-r--        10/14/2015   5:06 PM            Favorites</code></pre>
 
         <script>
             ajax();
-
-            $(function() {                
-                var documentUpdate = new Date(document.lastModified);
-                var iso8601 = /\d{4}-\d{2}-\d{2}/.exec(documentUpdate.toISOString())[0];
-
-                $("time[pubdate]").attr("datetime", iso8601);
-                $("time[pubdate]").html(documentUpdate.toLocaleDateString());
-            });
+            pubdate();
         </script>
         <script src="rsc/js/prism.js"></script>
     </body>

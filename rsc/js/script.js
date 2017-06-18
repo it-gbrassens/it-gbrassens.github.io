@@ -1,5 +1,6 @@
 "use strict";
 
+
 function open_search(elmnt, trigger) {
     if (elmnt.css("display") == "none") {
         elmnt.css("display", "block");
@@ -10,6 +11,7 @@ function open_search(elmnt, trigger) {
         trigger.removeClass("fa-close").addClass("fa-search");
     }
 }
+
 
 function ajax() {
 
@@ -41,6 +43,16 @@ function ajax() {
     });
 }
 
+
 $(function () {
     $(".dropdown").has('a.active').addClass('active');
 });
+
+
+function pubdate() {
+    var documentUpdate = new Date(document.lastModified);
+    var iso8601 = /\d{4}-\d{2}-\d{2}/.exec(documentUpdate.toISOString())[0];
+
+    $("time[pubdate]").attr("datetime", iso8601);
+    $("time[pubdate]").html(documentUpdate.toLocaleDateString());
+}
