@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"> 
+        <title>Brassens: cours d'informatique - le web</title>
+        <link rel="icon" href="http://www.ville-bondy.fr/fileadmin/templates/img/favicon.ico" type="image/gif" sizes="16x16"> 
+
+        <link rel="stylesheet" href="/rsc/css/meyer-reset.css">
+        <link rel="stylesheet" href="/rsc/css/font-awesome.css">
+        <link rel="stylesheet" href="/rsc/css/prism.css">
+
+        <script src="/rsc/js/jquery-3.2.1.js"></script>
+
+        <link rel="stylesheet" href="/rsc/css/style.css">
+        <script src="/rsc/js/script.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav></nav>
+        </header>
+        <aside></aside>
+
+        <section>
+            <article>
+                <time datetime="" pubdate></time>
+                <ul id="breadcrumb">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Module</a></li>
+                    <li>Article</li>
+                </ul>
+
+                <pre><code class="language-markup line-numbers">&lt;pre>&lt;code class="language-javascript line-numbers">if (pathOnly == "/") {
+    fileName = "index.html";
+    pathOnly = "/";
+    pathFile = pathOnly + fileName;
+    pathModule = "/modules/home/";
+    var pathIndex = null;
+}
+
+$('nav').load('/navigation.html', function() {
+    if (pathOnly.includes("home")) {
+        pathOnly = "/";
+    }
+    $("a[href='" + pathOnly + "index.html" + "']").addClass("active");
+});&lt;/pre>&lt;/code></code></pre>
+
+                <pre ><code class="language-javascript line-numbers">if (pathOnly == "/") {
+    fileName = "index.html";
+    pathOnly = "/";
+    pathFile = pathOnly + fileName;
+    pathModule = "/modules/home/";
+    var pathIndex = null;
+}
+
+$('nav').load('/navigation.html', function() {
+    if (pathOnly.includes("home")) {
+        pathOnly = "/";
+    }
+    $("a[href='" + pathOnly + "index.html" + "']").addClass("active");
+});</code></pre>
+                
+            </article>
+
+            <footer></footer>
+        </section>
+
+        <script>
+            ajax();
+            pubdate();
+        </script>
+        <script src="/rsc/js/prism.js"></script>
+    </body>
+</html>
