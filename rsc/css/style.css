@@ -53,7 +53,7 @@ pre {
 
 article {
     margin-top: 15px;
-/*    text-align: justify;*/
+    /*    text-align: justify;*/
 }
 
 /***** NAVBAR *****/
@@ -327,3 +327,41 @@ time[pubdate] {
     margin: 8px 16px ;
 }
 /***** !UPDATE ****/
+
+/***** TREE ****/
+#tree ul > li {
+    border-left-style: solid;
+    border-left-width: 3px;
+    padding-left: 10px;
+}
+
+#tree ul {
+    margin-left: 6px;
+}
+
+#tree ul {
+    border-left-style: groove;
+    border-left: coral;
+}
+
+#tree > li:hover{
+    cursor: pointer;
+}
+
+#tree .rollup::before {
+    content: "\25B6\0020";
+    position: relative;
+    left: 2px;
+    margin-right: 2px;
+}
+
+#tree .rolldown::before {
+    content: "\25BC\0020";
+}
+
+#tree a:hover {
+    text-decoration: underline;
+    color: #4CAF50;
+}
+/***** !TREE ***/
+

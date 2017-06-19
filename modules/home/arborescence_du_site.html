@@ -5,14 +5,14 @@
         <title>Brassens: cours d'informatique - le web</title>
         <link rel="icon" href="http://www.ville-bondy.fr/fileadmin/templates/img/favicon.ico" type="image/gif" sizes="16x16"> 
 
-        <link rel="stylesheet" href="../../rsc/css/meyer-reset.css">
-        <link rel="stylesheet" href="../../rsc/css/font-awesome.css">
+        <link rel="stylesheet" href="/rsc/css/meyer-reset.css">
+        <link rel="stylesheet" href="/rsc/css/font-awesome.css">
+        <link rel="stylesheet" href="/rsc/css/prism.css">
 
-        <link rel="stylesheet" href="../../rsc/css/style.css">
+        <script src="/rsc/js/jquery-3.2.1.js"></script>
 
-        <script src="../../rsc/js/jquery-3.2.1.js"></script>
-        
-        <script src="../../rsc/js/script.js"></script>
+        <link rel="stylesheet" href="/rsc/css/style.css">
+        <script src="/rsc/js/script.js"></script>
     </head>
     <body>
         <header>
@@ -22,15 +22,90 @@
 
         <section>
             <article>
-                <h1>Arborescence du site</h1>
-                <p>Appercu et définition des différents fichiers/dossiers du site.</p>
+                <time datetime="" pubdate></time>
+                <ul id="breadcrumb">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Module</a></li>
+                    <li>Article</li>
+                </ul>
+
+                <ul id="tree">
+                    <li>/
+                        <ul>
+                            <li>/modules
+                                <ul>
+                                    <li>/[moduleName]
+                                        <ul>
+                                            <li>[articleName].html</li>
+                                            <li><a>menu.html</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>/home
+                                        <ul>
+                                            <li>arborescence_du_site.html</li>
+                                            <li><a>menu.html</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>/rsc
+                                <ul>
+                                    <li>/css
+                                        <ul>
+                                            <li>font-awesome.css</li>
+                                            <li>meyer-reset.css</li>
+                                            <li>prism.css</li>
+                                            <li>style.css</li>
+                                        </ul>
+                                    </li>
+                                    <li>/fonts
+                                        <ul>
+                                            <li>fontawesome-webfont.eot</li>
+                                            <li>fontawesome-webfont.ttf</li>
+                                            <li>fontawesome-webfont.wof</li>
+                                            <li>fontawesome-webfont.wof2</li>
+                                        </ul>
+                                    </li>
+                                    <li>/img
+                                        <ul>
+                                            <li>footer_logo.jpg</li>
+                                            <li>footer_logo.png</li>
+                                        </ul>
+                                    </li>
+                                    <li>/js
+                                        <ul>
+                                            <li>jquery-3.2.1.js</li>
+                                            <li>prism.js</li>
+                                            <li>script.js</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a>footer.html</a></li>
+                            <li><a>index.html</a></li>
+                            <li><a>navigations.html</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </article>
+
+            <script>
+                $('li:has(ul)').addClass("rollup");
+
+                $('li:has(ul)').click(function( event ) {
+                    event.stopPropagation();
+                    $(this).toggleClass("rolldown").toggleClass("rollup").find(">:first-child").slideToggle();
+                });
+            </script>
 
             <footer></footer>
         </section>
 
         <script>
+//            functions();
             ajax();
+            pubdate();
         </script>
+        <script src="/rsc/js/prism.js"></script>
     </body>
 </html>
