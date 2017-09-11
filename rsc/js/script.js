@@ -1,18 +1,6 @@
 "use strict";
 
 
-function open_search(elmnt, trigger) {
-    if (elmnt.css("display") == "none") {
-        elmnt.css("display", "block");
-        trigger.removeClass("fa-search").addClass("fa-close");
-    }
-    else {
-        elmnt.css("display", "none");
-        trigger.removeClass("fa-close").addClass("fa-search");
-    }
-}
-
-
 function ajax() {
 
     var pathFile = document.location.pathname;
@@ -20,23 +8,25 @@ function ajax() {
     var pathOnly = pathFile.replace(fileName, '');
     var pathModule = pathOnly;
 
-    if (pathOnly == "/") {
+    if (pathOnly == "/" && fileName != "inscription.html") {
         fileName = "index.html";
         pathOnly = "/";
         pathFile = pathOnly + fileName;
-        pathModule = "/modules/home/";
-        var pathIndex = null;
     }
 
     $('nav').load('/navigation.html', function() {
-        if (pathOnly.includes("home")) {
-            pathOnly = "/";
+        if (fileName != "inscription.html") {
+            $("a[href='" + pathOnly + "index.html" + "']").addClass("active");
+            console.log("yes");
         }
-        $("a[href='" + pathOnly + "index.html" + "']").addClass("active");
+        else {
+            $("a[href='" + pathOnly + "inscription.html" + "']").addClass("active");
+        }
     });
 
     $('aside').load(pathModule + "menu.html", function() {
         $("a[href='" + pathFile + "']").addClass("active");
+        console.log(pathFile);
     });
 
     $('footer').load('/footer.html', function() {
