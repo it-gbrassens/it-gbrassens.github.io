@@ -1,8 +1,6 @@
 "use strict";
 
-
-function ajax() {
-
+$(function ajax() {
     var pathFile = document.location.pathname;
     var fileName = pathFile.match(/[^\/]+$/);
     var pathOnly = pathFile.replace(fileName, '');
@@ -31,18 +29,17 @@ function ajax() {
 
     $('footer').load('/footer.html', function() {
     });
-}
+});
 
 
 $(function () {
     $(".dropdown").has('a.active').addClass('active');
 });
 
-
-function pubdate() {
+$(function pubdate() {
     var documentUpdate = new Date(document.lastModified);
     var iso8601 = /\d{4}-\d{2}-\d{2}/.exec(documentUpdate.toISOString())[0];
 
     $("time[pubdate]").attr("datetime", iso8601);
     $("time[pubdate]").html(documentUpdate.toLocaleDateString());
-}
+});
